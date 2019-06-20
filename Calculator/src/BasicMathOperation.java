@@ -5,7 +5,7 @@ public class BasicMathOperation {
 	public static void main(String args[])
 	{
 		Scanner scan =new Scanner(System.in);
-		System.out.println("Enter the operation you want ADD OR SUB OR MUL");
+		System.out.println("Enter the operation you want ADD OR SUB OR MUL OR DIV");
 		String operation = scan.nextLine();
 
 		switch (operation) {
@@ -33,11 +33,20 @@ public class BasicMathOperation {
 			int i = mul(g,h); 
 			System.out.println("Result is ...."+i);
 			break;
+		case "DIV":
+			System.out.println("Enter the first number....");
+			int j = scan.nextInt();
+			System.out.println("Enter second number.......");
+			int k = scan.nextInt();
+			int l = div(j,k); 
+			System.out.println("Result is ...."+l);
+			break;
 		default:
 			System.out.println("Default Values are");
 			System.out.println("--------ADD-------");
 			System.out.println("--------SUB-------");
 			System.out.println("--------MUL-------");
+			System.out.println("--------DIV-------");
 			break;
 		}
 
@@ -56,6 +65,11 @@ public class BasicMathOperation {
 	public static int mul(int a ,int b)
 	{
 		int result = a*b;
+		return result;
+	}
+	public static int div(int a ,int b)
+	{
+		int result = a/b;
 		return result;
 	}
 
